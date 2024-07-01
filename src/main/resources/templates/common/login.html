@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--タイムリーフテンプレートエンジンを使用する-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>login</title>
+    <meta charset="utf-8" />
+    <!--タイムリーフ用のスタイルシート読み込み-->
+    <link rel="stylesheet" type="text/css" th:href="@{/login.css}">
+</head>
+
+<body>
+
+    <!--全枠（ラッパー）-->
+    <div class="wrapper">
+
+        <!--ヘッダ文字-->
+        <header>My Portfolio</header>
+
+            <h1>ログイン</h1>
+
+            <!--中枠（コンテナ）-->
+            <div class="container">
+
+                <!--ラベル-->
+                <p class="login-title">メールアドレス</p>
+
+                <!--アドレス入力欄-->
+                <input class="login-input">
+
+                <!--ラベル-->
+                <p class="login-title">パスワード</p>
+
+                <!--パスワード入力欄-->
+                <input class="login-input">
+
+                <!--ログインボタン-->
+                <button class="login-btn">ログインする</button>
+
+                <!--新規登録ボタン-->
+                <button class="signup-btn">新規登録する</button>
+
+            </div>
+
+        <!--フッタ文字-->
+        <footer>Portfolio site</footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+
+body {
+
+    /* なぜかデフォルトでmargin 8 がついているので消去 */
+    margin: 0;
+
+}
+
+.wrapper {
+
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: bold;
+    text-align: center;
+
+    /* ラッパーを一番奥にしてるつもり。ちょっといるのか不明。 */
+    z-index: 0;
+
+    /* コンテナ中央揃え準備 */
+    position: relative;
+}
+
+
+header {
+
+    /* ヘッダ文字のデザイン */
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 36px;
+
+    /* 文字中央寄せ */
+    text-align: center;
+    line-height: 120px;
+
+     /* ヘッダ背景ライン */   
+    background-color: #1B5678;
+    height: 120px;
+
+    /* ヘッダの固定 */
+    position: fixed;　/*fixedで固定*/
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+h1 {
+
+    /* ログイン文字デザイン */
+    color: black;
+    font-weight: normal;
+    position: absolute;
+
+    /* コンテナ水平・垂直方向の中央揃え */
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* ログイン文字位置中央 */
+    line-height: 48px;
+
+}
+
+.container {
+
+    /* 中央コンテナ全体 */    
+    height: 346px;
+    width: 480px;
+    position: absolute;
+    width: 480px;
+
+    /* コンテナ自体の水平・垂直方向の中央揃え */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* コンテナ内中央揃え */
+    text-align:center;
+    padding:20px 0;
+
+}
+
+
+/*入力欄タイトル_共通*/
+
+.login-title {
+
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 12px;
+    width: 480px;
+    text-align:left
+
+}
+
+
+/*入力欄*/
+
+.login-input {
+
+    width: 480px;
+    margin-bottom: 40px;
+
+    /* 入力枠を下線以外消す */   
+    border-right:none;
+    border-left:none;
+    border-top:none;
+        
+}
+
+
+/*ログインする ボタン*/
+
+.login-btn {
+
+    /* ボタン内の文字 */
+	size: 18px;
+    color: #fff;
+
+    /* ボタン箱自体 */    
+    background-color: #1B5678;
+    height: 53px;
+    width: 268px;
+    padding: 16px 80px;
+    display: block;
+    border-radius: 4px;　/* ボタンの角を丸める */
+
+    /* ボタン位置 */
+	text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px; /* 下のボタンとの間に余白 */
+    
+}
+
+
+/*新規登録する ボタン*/
+
+.signup-btn {
+ 
+    /* 新規ボタンの文字 */
+    size: 18px;
+    color: #fff;
+
+    /* 新規ボタン箱自体 */
+    background-color: #1B5678;
+    height: 53px;
+    width: 268px;
+    padding: 16px, 80px, 16px, 80px;
+    display: block;
+
+    margin: 0 auto;
+    border-radius: 4px;　/* ボタンの角を丸める */
+
+}
+
+
+footer {
+
+    /* フッタ文字のデザイン */
+    color: #FFFFFF;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 18px;
+
+    /* フッタ背景 */
+    background-color: #1B5678;
+    height: 40px;
+
+    /* フッタ文字位置 */    
+    line-height: 40px;
+    margin: 0 auto;
+
+    /* フッター固定 */
+    position: fixed;　/*fixedで固定*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--タイムリーフテンプレートエンジンを使用する-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>signin</title>
+    <meta charset="utf-8" />
+    <!--CSSスタイルシートをタイムリーフとして読み込む-->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/signin.css}">
+</head>
+
+<body>
+
+    <!--全枠（ラッパー）-->
+    <div class="wrapper">
+        
+        <!--【個人開発5】バリデーションの表示：もしバリデーションエラーがあればif文でラベルを作って画面に赤字表示」-->
+        <div th:if="${validationError}" th:each="error : ${validationError}">
+            <label class="text-danger" th:text="${error}"></label>
+        </div>
+        
+        
+        <!--ヘッダ文字-->
+        <header><p>My Portfolio</p>
+        
+            <!--ログインボタン（ログイン画面のものを流用、CSSそのまま）-->
+            <button class="login-btn">ログイン</button>
+        </header>
+
+        <h1>新規登録</h1>
+
+        <!--中枠（コンテナ）-->
+        <form class="container" th:action="@{/signup}" th:object="${userAddRequest}" th:method="post">
+
+            <!--ラベル-->
+            <p class="login-title">氏名</p>
+
+            <!--氏名入力欄-->
+            <!--＋タイムリーフ利用-->
+            <input class="login-input" type="text" th:field="*{name}">
+
+            <!--ラベル-->
+            <p class="login-title">メールアドレス</p>
+
+            <!--アドレス入力欄-->
+            <!--＋タイムリーフ利用-->
+            <input class="login-input" type="text" th:field="*{email}">
+
+            <!--ラベル-->
+            <p class="login-title">パスワード</p>
+
+            <!--パスワード入力欄-->
+            <!--＋タイムリーフ利用-->
+            <input class="login-input" type="text" th:field="*{password}">
+
+            <!--登録ボタン-->
+            <button type="submit" class="signup-btn">登録する</button>
+
+        </form>
+
+        <!--フッタ文字-->
+        <footer>Portfolio site</footer>
+
+    </div>
+
+</body>
+</html>
